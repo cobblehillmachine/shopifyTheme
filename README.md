@@ -21,7 +21,7 @@ These step by step examples will tell you how to get a new Theme environment run
 First clone the git repo in your desired location
 
 ```
-git clone https://github.com/Vicula/shopifyTheme.git .
+git clone git@github.com:cobblehillmachine/shopifyTheme.git .
 ```
 
 Remove connection to current git repository
@@ -36,14 +36,13 @@ Connect to new Cobble Hill repository
 git remote add origin [repo url]
 ```
 
-
-We will need to reinitiate slate on the theme so at the same level as your `src` folder run the following command:
+We will need to reinitiate slate on the theme so at the same level as your `templates/` folder run the following command:
 
 ```
 slate migrate
 ```
 
-Find the config.yml file one folder down and open it.
+Find the config.yml file and open it.
 Replace the store field under the Development enviroment with your current shopify site like so:
 
 ```
