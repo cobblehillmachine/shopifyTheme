@@ -72,6 +72,9 @@ For first time setup run the start command in your terminal inside your theme di
 ```
 slate start
 ```
+This should be for first time use only or to complelely overwrite the theme that is currently sitting on their shopify site
+
+This is going to open a local version for you to work on localy and without internet you will have access to browsersync for debug and other development needs.
 
 To kill any command running press this command in your terminal
 
