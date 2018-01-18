@@ -95,29 +95,107 @@ cntrl + c
 ```
 
 
-## Running the tests
+## Commands
 
-Explain how to run the automated tests for this system
+### Here is a list of general commands:
 
-### Break down into end to end tests
+### Slate
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Get help with Slate command
 
 ```
-Give an example
+slate [command] -h
+```
+
+Get slate version
+
+```
+slate -v
+```
+
+Run slate's built in Lint package
+
+```
+slate test
+```
+
+Get a zip file of your theme
+
+```
+slate zip
+```
+
+Run slate's watchers
+
+```
+slate watch
+```
+```
+slate watch -e,   deploy to a specific environment
+slate watch -n,   disable Browsersync
+```
+
+### Theme Kit
+
+Opens the preview page for the selected enviroment
+
+```
+theme open --env=development
+```
+
+Upload select files to specified enviroment
+
+```
+theme upload -d src -e development templates/404.liquid
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To deploy the theme to the live site run the deploy command in your theme directory. This will overwrite all the theme code on the shopify theme currently. This also deploys to all the enviroments in your config.yml file.
+
+```
+slate deploy
+```
+
+If you want to deploy only to a specific enviroment you can use the `-e` flag to dictate one.
+
+```
+slate deploy -e development
+```
+
+And if you want to be picky and choose multiple:
+
+```
+slate deploy -e development,staging,production
+```
+
+If you are concerned about overwriting anything in the theme you can download the theme from shopify, which will overwrite all the local theme code on your computer. The `-d` flag is for the directory to install to so we want `src` and the `-e` flag is for the enviroment from your config.yml so we `development`.
+
+```
+theme download -d src -e development
+```
+
+To download specif assets list the file path after the enviroment:
+
+```
+theme download -d src -e development templates/404.liquid
+```
+
+And to download multiple assets just space seperate the file paths:
+
+```
+theme download -d src -e development templates/404.liquid templates/article.liquid
+```
+
+If you get an error from Theme Kit try to reinstall it with this command:
+
+```
+curl -s https://raw.githubusercontent.com/Shopify/themekit/master/scripts/install | sudo python
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 <!-- ## Built With
 
