@@ -199,7 +199,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Victor Carpenter** - *Initial work* - [Vicula](https://github.com/Vicula)
 
 <!-- ## Built With
 
