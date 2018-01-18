@@ -18,19 +18,67 @@ npm install -g @shopify/slate
 
 These step by step examples will tell you how to get a new Theme environment running.
 
-First
+First clone the git repo in your desired location
 
 ```
-Give the example
+git clone https://github.com/Vicula/shopifyTheme.git .
 ```
 
-And repeat
+Find the config.yml file one folder down and open it.
+Replace the store field under the Development enviroment with your current shopify site like so:
 
 ```
-until finished
+store: myfairygardensshop.myshopify.com
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+After adding the store url you will want to go to your theme location in your terminal and extract the theme like so:
+
+```
+slate deploy -m
+```
+
+This will open the file location of the ziped file and also open your shopify admin.
+You will need to locate the Upload Theme button to the left of the current themes.
+Once the Theme is uploaded you will want to click the customize button.
+Once in the editor look at your browser url:
+
+```
+/admin/themes/196052232/editor
+```
+
+You will want to grab the number from the url and copy to your clipboard.
+Go back to your config.yml file and replace the theme id with the number you just grabbed:
+
+
+```
+theme_id: "196052232"
+```
+
+Now we will need to go back to the shopify admin and click on the Apps section.
+Once here scroll to the bottom and click the 'Mange Private Apps' button.
+Once in here find the create new private app button.
+Give yourself Read and write access to the Theme templates and theme assets option.
+Once created grab the app Password and copy to your clipboard.
+Replace the password section in the config.yml with this password.
+
+```
+password: 1234567890123456789012345667
+```
+
+After all of this you are ready to launch your theme watchers and deploy scripts!
+
+For first time setup run the start command in your terminal inside your theme directory:
+
+```
+slate start
+```
+
+To kill any command running press this command in your terminal
+
+```
+cntrl + c
+```
+
 
 ## Running the tests
 
