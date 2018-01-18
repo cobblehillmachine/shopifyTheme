@@ -36,6 +36,13 @@ Connect to new Cobble Hill repository
 git remote add origin [repo url]
 ```
 
+
+We will need to reinitiate slate on the theme so at the same level as your `src` folder run the following command:
+
+```
+slate migrate
+```
+
 Find the config.yml file one folder down and open it.
 Replace the store field under the Development enviroment with your current shopify site like so:
 
