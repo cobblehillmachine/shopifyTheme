@@ -24,6 +24,18 @@ First clone the git repo in your desired location
 git clone https://github.com/Vicula/shopifyTheme.git .
 ```
 
+Remove connection to current git repository
+
+```
+git remote remove origin
+```
+
+Connect to new Cobble Hill repository
+
+```
+git remote add origin [repo url]
+```
+
 Find the config.yml file one folder down and open it.
 Replace the store field under the Development enviroment with your current shopify site like so:
 
@@ -107,7 +119,7 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
+<!-- ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
@@ -135,4 +147,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone who's code was used
 * Inspiration
-* etc
+* etc -->
